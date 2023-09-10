@@ -101,6 +101,6 @@ class System
     public static function getClientIp(RequestInterface $request = null): string
     {
         $request = $request ?? self::request();
-        return $request->getServerParams()['REMOTE_ADDR'] ?? '';
+        return $request->getServerParams()['remote_addr'] ?? '';
     }
 }
